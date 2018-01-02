@@ -1,0 +1,273 @@
+@cl_Menu: #3a299c;
+//@cl_Menu_Light:
+
+:root {
+  --cor1: #9c0ab7;
+}
+
+:focus {
+  outline: none 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cor1);
+}
+
+::selection {
+  background: var(--cor1);
+  color: #fff;
+}
+
+body {
+  color: #575757;
+  font-family: OpenSans, serif;
+}
+
+b {
+  font-family: OpenSans-ExtraBold, sans-serif;
+}
+
+.last-posts {
+  h1 {
+    text-align: right;
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+  }
+  .row {
+    text-align: justify;
+  }
+}
+
+.card-light {
+  background-image: -webkit-linear-gradient(0, #d01f40 0%, rgb(222, 20, 104) 65%);
+  background-image: -moz-linear-gradient(0, #d01f40 0%, rgb(222, 20, 104) 65%);
+  background-image: -o-linear-gradient(0, #d01f40 0%, rgb(222, 20, 104) 65%);
+  background-image: -ms-linear-gradient(0, #d01f40 0%, rgb(222, 20, 104) 65%);
+  color: white;
+  padding: 5px 15px 5px 15px;
+  border-radius: 7px;
+  -webkit-box-shadow: 1px 0 22px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 0 22px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0 22px rgba(0, 0, 0, 0.2);
+
+  header {
+    font-family: OpenSans-SemiBold, serif;
+  }
+  main {
+    text-align: justify;
+  }
+
+  footer {
+
+    ul {
+      li {
+        display: inline-block;
+      }
+    }
+    .informations {
+      margin-top: 15px;
+      -webkit-padding-start: 0;
+      .author {
+        float: right !important;
+      }
+    }
+  }
+}
+
+.card-dark {
+  background-image: -webkit-linear-gradient(0, #c10ce2 0, #0999ff 77%);
+  background-image: -moz-linear-gradient(0, #c10ce2 0, #0999ff 77%);
+  background-image: -o-linear-gradient(0, #c10ce2 0, #0999ff 77%);
+  background-image: -ms-linear-gradient(0, #c10ce2 0, #0999ff 77%);
+  color: #fff;
+  padding: 5px 15px 5px 15px;
+  border-radius: 7px;
+  -webkit-box-shadow: 1px 0 22px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 0 22px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0 22px rgba(0, 0, 0, 0.2);
+
+  header {
+    font-family: OpenSans-SemiBold, serif;
+  }
+  main {
+    text-align: justify;
+  }
+  footer {
+
+    ul {
+      li {
+        display: inline-block;
+      }
+    }
+    .informations {
+      margin-top: 15px;
+      -webkit-padding-start: 0;
+      .author {
+        float: right !important;
+      }
+    }
+  }
+}
+
+.container {
+  background: #f9f7f7;
+  margin-top: -20px;
+}
+
+.posts {
+  margin-top: 15px;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+  .title-posts {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .table-post {
+    tbody {
+      .post-item {
+        .image {
+          img {
+            -webkit-border-radius: 15px 0 0 15px;
+            -moz-border-radius: 15px 0 0 15px;
+            border-radius: 15px 0 0 15px;
+          }
+        }
+        .description {
+          h3 {
+            font-family: OpenSans-ExtraBold, sans-serif;
+            a {
+              color: #1A1A1A;
+              text-decoration: none;
+              transition: all .25s ease;
+            }
+            a:hover {
+              color: #424141;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.panel-tw > .panel-heading {
+  color: #fff;
+  background-image: -webkit-linear-gradient(39deg, rgb(225, 64, 255) 0%, rgb(9, 153, 255) 64%, rgb(94, 196, 255) 97%);
+  background-image: -moz-linear-gradient(39deg, rgb(225, 64, 255) 0%, rgb(9, 153, 255) 64%, rgb(94, 196, 255) 97%);
+  border-color: #081d2f;
+  text-align: center;
+
+  .panel-title {
+    font-size: 20px;
+  }
+}
+
+.panel-tw {
+  .panel-footer {
+    background-image: -webkit-linear-gradient(135deg, rgb(225, 64, 255) 0%, rgb(9, 153, 255) 64%, rgb(94, 196, 255) 97%);
+    background-image: -moz-linear-gradient(135deg, rgb(225, 64, 255) 0%, rgb(9, 153, 255) 64%, rgb(94, 196, 255) 97%);
+    a, a:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.panel {
+  border: 1px solid #e0e0e0;
+}
+
+.destaque {
+  padding: 10px;
+  background: #1A1A1A;
+  color: white;
+  text-align: center;
+}
+
+.more-posts {
+  padding-right: 15px;
+  background-image: -webkit-linear-gradient(135deg, rgb(92, 170, 230) 0%, rgb(9, 153, 255) 64%, rgb(94, 196, 255) 97%);
+  background-image: -moz-linear-gradient(135deg, rgb(92, 170, 230) 0%, rgb(9, 153, 255) 64%, rgb(94, 196, 255) 97%);
+  background-image: -o-linear-gradient(135deg, rgb(92, 170, 230) 0%, rgb(9, 153, 255) 64%, rgb(94, 196, 255) 97%);
+  background-image: -ms-linear-gradient(135deg, rgb(92, 170, 230) 0%, rgb(9, 153, 255) 64%, rgb(94, 196, 255) 97%);
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+  margin-top: 4px;
+
+  main {
+    text-align: center;
+    color: white;
+  }
+}
+
+.explanation-posts {
+  text-align: justify;
+  margin-top: -20px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+
+  padding-left: 5px;
+  h2 {
+    font-family: OpenSans-Bold, sans-serif;
+  }
+  .description {
+    font-family: OpenSans, sans-serif;
+    padding-bottom: 5px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .table-post {
+    tbody {
+      .post-item {
+        .image {
+          img {
+            -webkit-border-radius: 15px 0 0 15px;
+            -moz-border-radius: 15px 0 0 15px;
+            border-radius: 15px 0 0 15px;
+          }
+        }
+        .description {
+          color: #d2d2d2;
+          h3 {
+            font-family: OpenSans-ExtraBold, sans-serif;
+            a {
+              color: #d2d2d2;
+              text-decoration: none;
+              transition: all .25s ease;
+              letter-spacing: -1px;
+
+            }
+            a:hover {
+              color: #424141;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.other-notices-posts {
+  padding: 0;
+  background: #1d1e27;
+  border-left: 6px solid #00BCD4;
+}
+
+.img-responsive {
+  margin-top: 30px
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+  border-color: #222323;
+}
+
+.footer-site {
+  padding: 10px;
+  background: #1A1A1A;
+  color: white;
+  text-align: center;
+}

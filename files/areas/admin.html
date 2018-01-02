@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>TWUISEO - Marketing Digital e Desenvolvimento Web | Administração</title>
+    <link rel="stylesheet" href="../resources/css/animate.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/bootsnav.min.css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="../resources/css/twuiseo.css">
+    <link rel="stylesheet" href="../resources/css/areas/admin.min.css">
+    <link rel="stylesheet" href="../ionicons/dist/css/ionicons.min.css">
+    <link rel="stylesheet" href="../resources/font-awesome/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="../resources/css/fonts.min.css">
+    <!-- Plugins -->
+    <link rel="stylesheet" href="../resources/plugins/leader/leader-line.css">
+    <link rel="stylesheet" href="../resources/plugins/jquery-elevator/jquery.elevator.min.css">
+    <link rel="stylesheet" href="../resources/plugins/jquery-sweet-modal/jquery.sweet-modal.min.css">
+    <link href="../resources/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="../resources/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+
+
+</head>
+<body>
+<main>
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-twuiseo navbar-sidebar bootsnav" style="z-index: 11">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a href="#brand" class="navbar-brand">
+                    <img src="../resources/images/admin/logo-admin-black.png" class="twresponsive">
+                </a>
+            </div>
+            <!-- End navigation header -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+
+                <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeInUp">
+                    <li class="active"><a href="../index.html"><i class="ion-ios-home-outline"></i> Home</a></li>
+                    <li><a href="../index.html#contact"><i class="ion-ios-send-outline"></i> Contato</a></li>
+                    <li><a href="../trilha.html"><i class="ion-ios-analytics-outline"></i> Trilhas</a></li>
+                </ul>
+
+                <div class="share" align="center">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navigation -->
+
+    <section class="bar-top">
+        <i class="fa fa-arrow-left"></i>
+        <input type="text" class="search" placeholder=" Pesquisar">
+
+        <span class="user-info">
+
+        <img src="../resources/images/user-test.png" alt="User_pic">
+        <b>Olá, Marden</b>
+        <button class="logout-user">
+            <i class="ion-ios-log-out"></i>
+        </button>
+    </span>
+    </section>
+    <section class="info-local">
+        Administração
+        <span class="date"><i class="ion-ios-calendar-outline"></i> 27/12/2017</span>
+    </section>
+
+    <section class="widgets">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="box-widgets">
+                        <b>MENSAGENS</b>
+                        <br>
+                        <ul>
+                            <li>
+                                <div id="sparklinedash"></div>
+                            </li>
+                            <li class="contador">
+                                <b class="counter">100</b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="box-widgets">
+                        <b>PROJETOS</b>
+                        <br>
+                        <ul>
+                            <li>
+                                <div id="sparklinedash2"></div>
+                            </li>
+                            <li class="contador">
+                                <b class="counter">100</b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="box-widgets">
+                        <b>VENDAS</b>
+                        <br>
+                        <ul>
+                            <li>
+                                <div id="sparklinedash3"></div>
+                            </li>
+                            <li class="contador">
+                                <b class="counter">100</b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row white-box">
+                <p><b>ÚLTIMAS MENSAGENS</b></p>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>
+                                #
+                            </th>
+                            <th>
+                                <i class="ion-ios-text-outline"></i> MENSAGEM
+                            </th>
+                            <th>
+                                <i class="ion ion-ios-calendar-outline"></i> Iniciado em:
+                            </th>
+                            <th>
+                                <i class="ion-ios-checkmark-circle-outline"></i> Término
+                            </th>
+                            <th>
+                                <i class="ion-ios-stats-outline"></i> Status
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>
+                                30/11/2017
+                            </td>
+                            <td>
+                                30/12/2017
+                            </td>
+                            <td >
+                                <ul class="status-project">
+                                    <li class="waiting">Em espera</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>
+                                30/11/2017
+                            </td>
+                            <td>
+                                30/12/2017
+                            </td>
+                            <td >
+                                <ul class="status-project">
+                                    <li class="started">Iniciado</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>
+                                30/11/2017
+                            </td>
+                            <td>
+                                30/12/2017
+                            </td>
+                            <td >
+                                <ul class="status-project">
+                                    <li class="working">Em andamento</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>
+                                30/11/2017
+                            </td>
+                            <td>
+                                30/12/2017
+                            </td>
+                            <td >
+                                <ul class="status-project">
+                                    <li class="finished">Finalizado</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <br>
+            <div class="row white-box">
+                <p><b>PROJETOS CONCLUÍDOS</b></p>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>
+                                #
+                            </th>
+                            <th>
+                                <i class="ion-ios-text-outline"></i> DESCRIÇÃO
+                            </th>
+                            <th>
+                                <i class="ion ion-ios-calendar-outline"></i> Iniciado em:
+                            </th>
+                            <th>
+                                <i class="ion-ios-checkmark-circle-outline"></i> Término
+                            </th>
+                            <th>
+                                <i class="ion-ios-stats-outline"></i> DETALHES
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>
+                                30/11/2017
+                            </td>
+                            <td>
+                                30/12/2017
+                            </td>
+                            <td >
+                                <button class="btn btn-xs btn-twuiseo2">
+                                     Ver
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>
+                                30/11/2017
+                            </td>
+                            <td>
+                                30/12/2017
+                            </td>
+                            <td >
+                                <button class="btn btn-xs btn-twuiseo2">
+                                     Ver
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>
+                                30/11/2017
+                            </td>
+                            <td>
+                                30/12/2017
+                            </td>
+                            <td >
+                                <button class="btn btn-xs btn-twuiseo2">
+                                     Ver
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>
+                                30/11/2017
+                            </td>
+                            <td>
+                                30/12/2017
+                            </td>
+                            <td >
+                                <button class="btn btn-xs btn-twuiseo2">
+                                     Ver
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="paymets">
+        <div class="container-fluid">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci animi aspernatur cum cupiditate delectus dignissimos earum eius, fugit impedit modi nulla officia optio recusandae sunt, unde ut velit voluptates?
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    &copy; TWUISEO Marketing Digital e Desenvolvimento Web - 2017
+</footer>
+<script src="../resources/js/jquery.js"></script>
+<script src="../resources/js/bootstrap.min.js"></script>
+<script src="../resources/js/bootsnav.js"></script>
+<script src="../resources/js/scrolly.js"></script>
+<!-- Plugins -->
+<script src="../resources/plugins/leader/leader-line.min.js"></script>
+<script src="../resources/plugins/jquery.typewriter.js"></script>
+<script src="../resources/plugins/jquery.breadcrumbs-generator.min.js"></script>
+<script src="../resources/plugins/jquery-elevator/jquery.elevator.min.js"></script>
+<script src="../resources/plugins/jquery-sweet-modal/jquery.sweet-modal.min.js"></script>
+<script src="../resources/plugins/counterup/jquery.counterup.min.js"></script>
+<script src="../resources/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="../resources/plugins/jquery-sparkline/jquery.charts-sparkline.min.js"></script>
+<script src="../resources/plugins/chartist-js/dist/chartist.min.js"></script>
+<script src="../resources/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+
+<script>
+    $(document).ready(() => {
+//        Counter Up
+        $(".counter").counterUp({
+            delay: 100,
+            time: 1200
+        });
+
+//        Sparkline
+        var sparklineLogin = function () {
+            $('#sparklinedash').sparkline([1, 2, 3, 4, 5, 6, 10], {
+                type: 'bar',
+                height: '40',
+                barWidth: '5',
+                resize: true,
+                barSpacing: '5',
+                barColor: '#7460ee'
+            });
+
+            $('#sparklinedash3').sparkline([0, 5, 6, 10, 9, 12, 4, 9], {
+                type: 'bar',
+                height: '40',
+                barWidth: '5',
+                resize: true,
+                barSpacing: '5',
+                barColor: '#ee5452'
+            });
+            $('#sparklinedash2').sparkline([0, 5, 6, 10, 9, 12, 4, 9], {
+                type: 'bar',
+                height: '40',
+                barWidth: '5',
+                resize: true,
+                barSpacing: '5',
+                barColor: '#1c9991'
+            });
+        }
+
+        var sparkResize;
+        $(window).on("resize", function (e) {
+            clearTimeout(sparkResize);
+            sparkResize = setTimeout(sparklineLogin, 1000);
+        });
+        sparklineLogin();
+    });
+</script>
+
+
+</body>
+</html>

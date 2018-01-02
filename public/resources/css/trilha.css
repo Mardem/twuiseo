@@ -1,0 +1,99 @@
+body {
+    background: #1A1A1A;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.trilha-container {
+    min-height: 400px;
+    background: #1a1a1a;
+    color: white;
+}
+.trilha-container > .container {
+    padding-top: 10px;
+}
+
+.trilha-container > .container > .row > h5,
+.trilha-container > .container > .row > p{
+    color: white;
+    text-align: center;
+}
+
+.box-trilha {
+    color: var(--cor5);
+    padding: 30px;
+    background: white;
+    min-height: 325px;
+    border-radius: 20px;
+    transition: all .35s ease;
+    box-shadow: inset 0 5px 1px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+.box-trilha:hover {
+    box-shadow: inset 5px 5px 3px rgba(0,0,0,0.5);
+    cursor:default;
+}
+.box-trilha > header {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 18px;
+}
+
+.box-trilha > main {
+    text-align: left;
+}
+
+.box-trilha > main > .price-table-trilha{
+    padding-top: 10px;
+}
+
+.box-trilha > main > .price-table-trilha > li {
+    list-style: none;
+    border-bottom: dotted 1px #cccccc;
+}
+
+.box-trilha > main > .price-table-trilha > li > i {
+    color: var(--cor5);
+    font-size: 10px;
+    padding-right: 5px;
+}
+
+.box-trilha > footer {
+    padding-top: 4px;
+    font-size: 20px;
+}
+.box-trilha > footer > .contract {
+    float: right;
+}
+.box-trilha > footer > .contract > a {
+    background: var(--cor5);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.box-trilha > footer > .contract > a:hover {
+    background: var(--cor3);
+    color: var(--cor5);
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 15px rgba(0,0,0,0.5);
+}
+
+.price-tool{
+    float:right;
+    font-size: 12px;
+}
+
+.li-hidden {
+    opacity: 0;
+}

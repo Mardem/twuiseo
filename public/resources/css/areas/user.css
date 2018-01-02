@@ -1,0 +1,40 @@
+.tools-twuiseo {
+  background-color: #eaeaea;
+  box-shadow: -8px -2px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -8px -2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -8px -2px 1px rgba(0, 0, 0, 0.3);
+}
+.tools-twuiseo p {
+  font-family: Montserrat, sans-serif;
+}
+.last-news {
+  font-family: Montserrat, sans-serif;
+}
+.last-news .box {
+  background: white;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+.last-news .box .row .title {
+  background: #905aca;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+.last-news .box main {
+  padding-bottom: 10px;
+}
+.last-news .box main ul {
+  padding: 0;
+}
+.last-news .box main ul li {
+  list-style: none;
+  padding: 5px;
+  border-bottom: 1px dotted #b86dff;
+}
+@media (max-width: 768px) {
+  .last-news .box .row .title {
+    padding-left: 30px;
+  }
+}

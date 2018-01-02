@@ -1,0 +1,48 @@
+@color-white: #fff;
+@shadow: -8px -2px 1px rgba(0,0,0, 0.3);
+@font-padrao: Montserrat, sans-serif;
+@bx-shadow-25: 0 3px 8px rgba(0,0,0,0.25);
+
+.tools-twuiseo {
+  background-color: #eaeaea;
+  box-shadow: @shadow;
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  p {
+    font-family: @font-padrao;
+  }
+}
+.last-news {
+  font-family: @font-padrao;
+  .box {
+    background: white;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    box-shadow: @bx-shadow-25;
+    .row {
+      .title {
+        background: #905aca;
+        color: white;
+        padding: 10px;
+        box-shadow: @bx-shadow-25;
+      }
+    }
+    main {
+      padding-bottom: 10px;
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          padding: 5px;
+          border-bottom: 1px dotted #b86dff
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .last-news .box .row .title {
+    padding-left: 30px;
+  }
+}
