@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="{{ asset('resources/font-awesome/css/font-awesome.min.css') }}">
   <link rel="stylesheet" href="{{ asset('resources/css/fonts.min.css') }}">
   <link rel="stylesheet" href="{{ asset('ionicons/dist/css/ionicons.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('resources/plugins/checkbox/skins/all.css?v=1.0.2') }}">
   <style>
     a {
       color: white;
@@ -80,5 +81,16 @@
 <script src="{{ asset('resources/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('resources/js/bootsnav.js') }}"></script>
 <script src="{{ asset('resources/js/scrolly.js') }}"></script>
+<script src="{{ asset('resources/plugins/checkbox/icheck.js?v=1.0.2') }}"></script>
+
+<script>
+  $(document).ready(function () {
+    $('input').iCheck({
+      checkboxClass: 'iradio_square-purple',
+      radioClass: 'iradio_square-purple'
+    });
+  });
+</script>
+
 </body>
 </html>

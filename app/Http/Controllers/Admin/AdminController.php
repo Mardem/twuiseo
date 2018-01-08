@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Contact;
+use App\NewProject;
 use Auth;
 
 class AdminController extends Controller
@@ -18,7 +19,10 @@ class AdminController extends Controller
 
     $cCount = Contact::count();
     $contacts = Contact::orderBy('id', 'desc')->paginate();
-    return view('admin.home', compact('fName', 'cCount', 'contacts'));
+    $nPCount = NewProject::count();
+    $nprojects = NewProject::orderBy('id', 'desc')->paginate();
+
+    return view('admin.home', compact('fName', 'cCount', 'contacts', 'nPCount', 'nprojects'));
   }
 
   public function contact()

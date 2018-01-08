@@ -38,6 +38,10 @@ body {
   background: #EFEFEF;
 }
 
+table {
+  width: 100%;
+}
+
 a {
   color: #6f6f6f;
 }
@@ -740,4 +744,20 @@ th {
 .admin-link:hover {
   color: #9c0ab7;
   text-decoration: none;
+}
+
+.read-message {
+  background: transparent;
+  border-top: 1px solid #eee;
+}
+
+.responsered {
+  background: #000;
+}
+
+.unread-message {
+  background: #eeeeee;
+}
+td, th {
+  padding: 5px;
 }

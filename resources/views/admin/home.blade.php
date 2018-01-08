@@ -2,6 +2,13 @@
 @section('statusH', 'active')
 @section('content')
   <section class="widgets">
+
+    @if(Session::has('msg'))
+      <div class="alert-tw">
+        <i class="ion-ios-checkmark-circle-outline"></i> &nbsp; {{ Session::get('msg') }}
+      </div>
+    @endif
+
     <div class="container">
       <div class="row">
         <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -91,7 +98,10 @@
                     @endif
                   </td>
                   <td>
-                    {{ $contato->created_at }}
+                    @php
+                        $date = new Date($contato->created_at);
+                        echo $date->format('d/m/Y') . " • " . $date->ago();
+                        @endphp
                   </td>
                   <td>
                     @if($contato->read == 0)
@@ -101,9 +111,9 @@
                     @endif
                   </td>
                   <td>
-                    <button class="btn btn-xs btn-twuiseo2">
+                    <a class="btn btn-xs btn-twuiseo2" href="{{ route('admin.contactShow', $contato->id) }}">
                       Ver
-                    </button>
+                    </a>
                   </td>
                 </tr>
               @endforeach
@@ -112,6 +122,67 @@
           </div>
           {{ $contacts->links() }}
         @endif
+      </div>
+
+      <br>
+      <div class="row white-box">
+        <p><b>PROJETOS AGUARDANDO ANÁLISE</b></p>
+        @if($nPCount == 0)
+        <h4 style="text-align: center">Nenhum projeto ainda</h4>
+        @else
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <tr>
+              <th>
+                #
+              </th>
+              <th>
+                <i class="ion-ios-text-outline"></i> DESCRIÇÃO
+              </th>
+              <th>
+                <i class="ion ion-ios-calendar-outline"></i> Resposta
+              </th>
+              <th>
+                <i class="ion-ios-checkmark-circle-outline"></i> Tema
+              </th>
+              <th>
+                <i class="ion-ios-checkmark-circle-outline"></i> Número/Email
+              </th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>
+                <i class="ion-ios-stats-outline"></i> DETALHES
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+
+            @foreach($nprojects as $projeto)
+            
+            <tr>
+              <td>{{ $projeto->id }}</td>
+              <td>{{ $projeto->message }}</td>
+              <td>
+                {{ $projeto->type_response }}
+              </td>
+              <td>
+                {{ $projeto->theme }}
+              </td>
+              <td>{{ $projeto->number }}</td>
+              <td>{{ $projeto->name }}</td>
+              <td>{{ $projeto->email }}</td>
+              <td>
+                <button class="btn btn-xs btn-twuiseo2">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </td>
+            </tr>
+            @endforeach
+            </tbody>
+          </table>
+        </div>
+        @endif
+        {{ $nprojects->links() }}
       </div>
 
       <br>
@@ -153,7 +224,7 @@
                 </button>
               </td>
             </tr>
-            
+
             </tbody>
           </table>
         </div>

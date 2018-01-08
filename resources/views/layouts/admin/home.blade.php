@@ -49,8 +49,8 @@
       <div class="collapse navbar-collapse" id="navbar-menu">
 
         <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeInUp">
-          <li class="@yield('statusH', '')"><a href="{{ url('admin/dashboard') }}"><i class="ion-ios-home-outline"></i> Home</a></li>
-          <li class="@yield('statusC', '')"><a href="{{ url('admin/contact') }}"><i class="ion-ios-send-outline"></i> Contatos</a></li>
+          <li class="@yield('statusH', '')"><a href="{{ route('admin.dash') }}"><i class="ion-ios-home-outline"></i> Home</a></li>
+          <li class="@yield('statusC', '')"><a href="{{ route("admin.contact") }}"><i class="ion-ios-send-outline"></i> Contatos</a></li>
           <li><a href="trilha.html"><i class="ion-ios-analytics-outline"></i> Trilhas</a></li>
         </ul>
 
@@ -113,6 +113,7 @@
 <script src="{{ asset('resources/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js') }}"></script>
 <script src="{{ asset('resources/js/admin/script.min.js') }}"></script>
 
+@yield('scripts')
 
 </body>
 </html>

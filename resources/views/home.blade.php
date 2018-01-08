@@ -25,7 +25,7 @@
               <h4 style="font-family: Montserrat, serif;">Projetos</h4>
               <ul>
                 <li><span id="sparklinedash"></span></li>
-                <li class="counter">1</li>
+                <li class="counter">{{ $npCount }}</li>
               </ul>
             </main>
           </div>
@@ -98,6 +98,51 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="container">
+      <br>
+        <div class="panel panel-twuiseo">
+          <div class="panel-heading">
+          <h3 class="panel-title">Iniciar novo projeto</h3>
+          </div>
+
+          <div class="panel-body">
+            <p>Olá, para criar um novo projeto por favor, preencha abaixo os dados sobre o seu novo projeto.</p>
+            <form action="{{ route('newProject') }}" class="form" method="post">
+            {{ csrf_field() }}
+              <div class="form-group">
+                <label for="theme">Tema</label>
+                <input type="text" name="theme" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="number">Telefone para contato</label>
+                <input type="text" name="number" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <p for="email"><b>Tipo de contato</b></p>
+                <label>
+                  <input type="radio" name="email">
+                  Email
+                </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>
+                  <input type="radio" name="cellphone">
+                  Telefone
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="message">Descrição do projeto</label>
+                <textarea type="text" name="message" class="form-control" rows="7" required></textarea>
+              </div>
+          </div>
+          <div class="panel-footer">
+            <button type="submit" value="Enviar para orçamento" class="btn btn-tw-reply"><i class="fa fa-check"></i> Enviar para o orçamento</button>
+          </div>          
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
     <div class="row navigation">
 
       <div class="tabs">
@@ -119,7 +164,7 @@
             <div class="row">
 
               <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="panel panel-default">
+                <div class="panel panel-twuiseo">
                   <div class="panel-heading">
                     <h3 class="panel-title">Site 1</h3>
                   </div>
@@ -133,7 +178,7 @@
                 </div>
               </div>
               <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="panel panel-default">
+                <div class="panel panel-twuiseo">
                   <div class="panel-heading">
                     <h3 class="panel-title">Site 2</h3>
                   </div>
@@ -147,7 +192,7 @@
                 </div>
               </div>
               <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="panel panel-default">
+                <div class="panel panel-twuiseo">
                   <div class="panel-heading">
                     <h3 class="panel-title">Site 3</h3>
                   </div>
@@ -236,7 +281,7 @@
           <div class="tab-pane fade" id="project">
             <div class="table-responsive" style="font-family: Montserrat, serif">
               <b>SEUS PROJETOS</b>
-              <table class="table table-hover">
+              <table class="table">
                 <thead>
                 <tr>
                   <th>#</th>
@@ -247,91 +292,92 @@
                 </tr>
                 </thead>
                 <tbody>
+                
+                @foreach($nP as $projeto)
                 <tr>
-                  <td>1</td>
-                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                  <td>30/11/2017</td>
-                  <td>30/12/2017</td>
+                  <td>{{ $projeto->id }}</td>
+                  <td>Projeto #{{ Auth::user()->id }}{{ $projeto->id }}</td>
+                  @if($projeto->status == 0)
+                    <td>Indefinido</td>
+                    <td>Indefinido</td>
+                    @else
+                    <td>
+                      @php 
+                      $date = new Date($projeto->created_at);
+                        echo $date->format('d/m/Y') . " • " . $date->ago();
+                      @endphp
+                    </td>
+                    <td>@php 
+                      $update = new Date($projeto->updated_at);
+                        echo $update->format('d/m/Y') . " • " . $update->ago();
+                      @endphp
+                      </td>
+                  @endif
                   <td>
                     <ul class="status-project">
-                      <li class="waiting">Em espera</li>
+                      @if($projeto->status == 0)
+                        <li class="waiting">Em espera</li>
                       <!--<li class="started">Iniciado</li>-->
                       <!--<li class="working">Em andamento</li>-->
                       <!--<li class="finished">Finalizado</li>-->
+                      @endif
+                      
                     </ul>
                   </td>
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                  <td>30/11/2017</td>
-                  <td>30/12/2017</td>
-                  <td>
-                    <ul class="status-project">
-                      <!--<li class="waiting">Em espera</li>-->
-                      <li class="started">Iniciado</li>
-                      <!--<li class="working">Em andamento</li>-->
-                      <!--<li class="finished">Finalizado</li>-->
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                  <td>30/11/2017</td>
-                  <td>30/12/2017</td>
-                  <td>
-                    <ul class="status-project">
-                      <!--<li class="waiting">Em espera</li>-->
-                      <!--<li class="started">Iniciado</li>-->
-                      <li class="working">Em andamento</li>
-                      <!--<li class="finished">Finalizado</li>-->
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                  <td>30/11/2017</td>
-                  <td>30/12/2017</td>
-                  <td>
-                    <ul class="status-project">
-                      <!--<li class="waiting">Em espera</li>-->
-                      <!--<li class="started">Iniciado</li>-->
-                      <!--<li class="working">Em andamento</li>-->
-                      <li class="finished">Finalizado</li>
-                    </ul>
-                  </td>
-                </tr>
+                @endforeach
+
                 </tbody>
               </table>
             </div>
           </div>
           <div class="tab-pane fade" id="support">
             <div class="row support-message">
-              <div class="table-responsive">
-                <table>
-                  <tbody>
-                  <tr>
-                    <td class="icon-support">
-                      <img src="../resources/images/others/support-icon.svg" alt="">
-                    </td>
-                    <td class="message-support">
-                      <p class="title-message-support">Mensagem 1:</p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, animi commodi, deserunt
-                      dolore
-                      dolorem dolores eius illum ipsam ipsum numquam odio, placeat quasi totam! Delectus excepturi
-                      laudantium neque possimus repudiandae.
-                    </td>
-                    <td class="date-support">
-                      Criado por: <i class="fa fa-user"></i> Marden Cavalcante &nbsp;
-                      <i class="fa fa-clock-o"></i> há 2 horas, 51 minutos atrás
-                    </td>
-                  </tr>
+              @if($cCount != 0)
+                <div class="table-responsive">
+                  <table>
+                    <tbody>
 
-                  </tbody>
-                </table>
-              </div>
+                    @foreach($c as $msg)
+                      <tr
+                        @if($msg->responsered != 1)
+                          class="read-message"
+                        @else
+                        class="unread-message"
+                          @endif
+                      >
+                        <td class="icon-support">
+                          <img src="{{ asset('resources/images/others/support-icon.svg') }}" alt="">
+                        </td>
+                        <td class="message-support">
+                          <p class="title-message-support">Chamado #{{ $msg->id }}</p>
+                          <a href="{{ route('viewContact', $msg->id) }}">{{ $msg->message }}</a>
+                        </td>
+                        <td class="date-support">
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          Criado por: <i class="fa fa-user"></i> {{ $msg->name }} &nbsp;
+                            <i class="fa fa-clock-o"></i>
+                          @php
+                              $date = new Date($msg->created_at);
+                          echo $date->format('d/m/Y') ." • " .$date->ago();
+                              @endphp
+                        </td>
+                        <td>
+                          @if($msg->responsered == 1)
+                            <b class="text-success">Respondido</b>
+                            @else
+                            <b class="text-danger">Aguardando Resposta</b>
+                          @endif
+                        </td>
+                      </tr>
+                    @endforeach
+
+                    </tbody>
+                  </table>
+                </div>
+                @else
+                  <h4 align="center" style="margin-bottom: 0;margin-top: 15px"><i class="ion-ios-close-circle"></i> Nenhuma mensagem aqui</h4>
+              @endif
 
               <br>
               <a class="btn btn-primary" data-toggle="modal" href="#calls">Novo Chamado</a>
@@ -344,7 +390,7 @@
                     </div>
                     <form action="{{ url('contact/back') }}" method="post">
                     <div class="modal-body">
-                      <label for="o que você precisa?">
+                      <label for="message">
                         O que você precisa?
                       </label>
                       <textarea name="message" cols="30" rows="10" class="form-control" style="resize: none;"></textarea>
@@ -388,4 +434,21 @@
       alert('{{ Session::get('msg') }}');
     </script>
   @endif
+@endsection
+
+@section('styles')
+  textarea {
+    resize:none;
+  }
+
+  .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    text-align:center;
+  }
+@endsection
+
+@section('scripts')
+
+  <script>
+  </script>
+
 @endsection

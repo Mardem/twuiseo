@@ -35,7 +35,6 @@
               </th>
             </tr>
             </thead>
-            <tbody>
             @foreach($contacts as $contato)
               <tr>
                 <td>{{ $contato->id }}</td>
@@ -48,7 +47,10 @@
                   @endif
                 </td>
                 <td>
-                  {{ $contato->created_at }}
+                  @php
+                    $date = new Date($contato->created_at);
+                    echo $date->format('d/m/Y') . " • " . $date->ago();
+                  @endphp
                 </td>
                 <td>
                   @if($contato->read == 0)
@@ -58,12 +60,12 @@
                   @endif
                 </td>
                 <td>
-                  <button class="btn btn-xs btn-twuiseo2">
+                  <a class="btn btn-xs btn-twuiseo2" href="{{ route('admin.contactShow', $contato->id) }}">
                     Ver
-                  </button>
+                  </a>
                 </td>
               </tr>
-            @endforeach
+              @endforeach
             </tbody>
           </table>
         </div>

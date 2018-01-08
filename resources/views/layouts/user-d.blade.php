@@ -12,17 +12,38 @@
   <link rel="stylesheet" href="{{ asset('ionicons/dist/css/ionicons.min.css') }}">
   <link rel="stylesheet" href="{{ asset('resources/font-awesome/css/font-awesome.min.css') }}">
   <link rel="stylesheet" href="{{ asset('resources/css/fonts.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('resources/css/areas/usuario2.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('resources/css/areas/usuario2.css') }}">
   <link rel="stylesheet" href="{{ asset('resources/css/areas/user.min.css') }}">
   <!-- Plugins -->
   <link rel="stylesheet" href="{{ asset('resources/plugins/leader/leader-line.css') }}">
   <link rel="stylesheet" href="{{ asset('resources/plugins/jquery-elevator/jquery.elevator.min.css') }}">
   <link rel="stylesheet" href="{{ asset('resources/plugins/jquery-sweet-modal/jquery.sweet-modal.min.css') }}">
   <link rel="stylesheet" href="{{ asset('resources/plugins/calendar/css/pignose.calendar.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('resources/plugins/postit/jquery.postitall.css') }}">
+  <link rel="stylesheet" href="{{ asset('resources/plugins/checkbox/skins/all.css?v=1.0.2') }}">
+  
 
   <style>
     .pignose-calendar{width:100%;max-width:655px;max-height:480px}.pignose-calendar .pignose-calendar-top{background:#905aca;color:white}.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon{color:white}.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon{color:white}.pignose-calendar .pignose-calendar-top .pignose-calendar-top-year{color:white}.jqstooltip{width:80px;height:35px}
+
+
+    .panel-twuiseo .panel-heading {
+      background: #fff;
+    box-shadow: 1px 0 20px rgba(0,0,0,0.08);
+    }
+    .panel-twuiseo .panel-footer{
+      background: #f7f7f7;
+    border: 0;
+    }
+    .btn-tw-reply {
+      background: forestgreen;
+    color: white;
+    }
+    .btn-tw-reply:hover, .btn-tw-reply:focus {
+    color: white;
+    background: #2cb82c;
+}
+
+    @yield('styles')
   </style>
 </head>
 <body>
@@ -89,7 +110,18 @@
 <script src="{{ asset('resources/plugins/calendar/js/pignose.calendar.full.min.js') }}"></script>
 <script src="{{ asset('resources/plugins/postit/jquery.postitall.js') }}"></script>
 <script src="{{ asset('resources/js/script.min.js') }}"></script>
+<script src="{{ asset('resources/plugins/checkbox/icheck.js?v=1.0.2') }}"></script>
 
+@yield('scripts')
+
+<script>
+  $(document).ready(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_minimal',
+      radioClass: 'iradio_square-purple',
+    });
+  });
+</script>
 
 </body>
 </html>
