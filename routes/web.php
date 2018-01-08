@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth', 'as' => 'admin.', 'prefix' => 'admin'], fu
   Route::get('/contact', 'Admin\AdminController@contact')->name('contact');
   Route::get('/contact/view/{id}', 'Admin\ContactsController@view')->name('contactShow');
   Route::get('/contact/delete/{id}', 'Admin\ContactsController@delete')->name('contactDelete');
+  Route::get('/project', 'Admin\ProjectsController@home')->name('project');
   Route::get('/project/view/{id}', 'Admin\ProjectsController@view')->name('viewProject');
   Route::post('/contact/reply', 'Admin\ContactsController@response')->name('contactReply');
 });
