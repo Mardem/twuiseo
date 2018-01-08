@@ -23,6 +23,13 @@ class ProjectsController extends Controller
 
     public function view($id)
     {
-        echo $id;
+        $this->authorize('admin', Auth::user()->category); // Usando a Gate do provider
+        $name = Auth::user()->name;
+        $e = explode(' ', $name);
+        $fName = $e[0];
+
+        $project = NewProject::find($id);
+
+        return view('admin.projects.view', compact('project'));
     }
 }
