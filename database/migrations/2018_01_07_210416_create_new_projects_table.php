@@ -22,6 +22,7 @@ class CreateNewProjectsTable extends Migration
             $table->string('type_response');
             $table->string('theme');
             $table->integer('status');
+            $table->string('finish')->nullable();
             $table->timestamps();
         });
     }

@@ -349,3 +349,43 @@ nav.navbar.bootsnav ul.nav > li > a:hover, .attr-nav > ul > li > a:hover {
     margin-top: 0;
   }
 }
+
+.working {
+  background: #39157a;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: white;
+  padding: 5px
+}
+
+.finished {
+  background: #178600;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: white;
+  padding: 5px
+}
+
+.started {
+  background: #134bff;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: white;
+  padding: 5px
+}
+
+.waiting {
+  background: #ca3400;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: white;
+  padding: 5px
+}

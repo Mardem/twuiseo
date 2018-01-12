@@ -28,8 +28,11 @@ Route::group(['middleware' => 'auth', 'as' => 'admin.', 'prefix' => 'admin'], fu
   Route::get('/contact/view/{id}', 'Admin\ContactsController@view')->name('contactShow');
   Route::get('/contact/delete/{id}', 'Admin\ContactsController@delete')->name('contactDelete');
   Route::get('/project', 'Admin\ProjectsController@home')->name('project');
+  Route::get('/project/status/{code}/{id}', 'Admin\ProjectsController@changeStatus')->name('changeStatus');
   Route::get('/project/view/{id}', 'Admin\ProjectsController@view')->name('viewProject');
+  Route::post('/project/time-finish', 'Admin\ProjectsController@finish')->name('setFinish');
   Route::post('/contact/reply', 'Admin\ContactsController@response')->name('contactReply');
+  Route::get('/update/time', 'Admin\RestTimeController@update')->name('restTime');
 });
 
 // Contact links
