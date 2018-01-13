@@ -16,8 +16,9 @@ class CreateRestTimesTable extends Migration
         Schema::create('rest_times', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nameProject');
-            $table->string('idUser');
-            $table->string('restTime');
+            $table->string('client');
+            $table->integer('restTime');
+            $table->integer('contrated');
             $table->timestamps();
         });
     }

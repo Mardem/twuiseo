@@ -39,6 +39,15 @@ class ProjectsController extends Controller
         $project->status = $code;
         $project->save();
 
+        if ($code == 3) {
+            $rt = new \App\RestTime;
+            $rt->nameProject = '';
+            $rt->client = '';
+            $rt->restTime = 12;
+            $rt->contrated = 12;
+            $rt->save();
+        }
+
         session()->flash('msg', 'Status alterado com sucesso!');
         return redirect()->back();
     }

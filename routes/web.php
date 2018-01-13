@@ -32,7 +32,8 @@ Route::group(['middleware' => 'auth', 'as' => 'admin.', 'prefix' => 'admin'], fu
   Route::get('/project/view/{id}', 'Admin\ProjectsController@view')->name('viewProject');
   Route::post('/project/time-finish', 'Admin\ProjectsController@finish')->name('setFinish');
   Route::post('/contact/reply', 'Admin\ContactsController@response')->name('contactReply');
-  Route::get('/update/time', 'Admin\RestTimeController@update')->name('restTime');
+  Route::get('/update-time/{opt}/{id}', 'Admin\RestTimeController@update')->name('restTime');
+  Route::get('/update-time', 'Admin\RestTimeController@index')->name('homeRest');
 });
 
 // Contact links

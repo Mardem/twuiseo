@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="{{ asset('resources/css/areas/admin.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('ionicons/dist/css/ionicons.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('resources/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-
-
     <link rel="stylesheet" href="{{ asset('resources/css/fonts.min.css') }}" rel="stylesheet">
     <!-- Plugins -->
     <link rel="stylesheet" href="{{ asset('resources/plugins/leader/leader-line.css') }}" rel="stylesheet">
@@ -26,6 +24,8 @@
     <link href="{{ asset('resources/plugins/chartist-js/dist/chartist.min.css') }}" rel="stylesheet">
     <link href="{{ asset('resources/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css') }}"
           rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('resources/plugins/modal/jquery.sweet-modal.min.css') }}">
+
 
     <style>
         .back-arrow {
@@ -78,7 +78,9 @@
                     <li class="@yield('statusP', '')"><a href="{{ route("admin.project") }}"><i
                                     class="fa fa-stack-exchange"></i>
                             Projetos</a></li>
-                    <li><a href="trilha.html"><i class="ion-ios-analytics-outline"></i> Trilhas</a></li>
+                    <li class="@yield('statusRest', '')"><a href="{{ route("admin.homeRest") }}"><i
+                                    class="fa fa-stack-exchange"></i>
+                            Tempo Restante</a></li>
                 </ul>
 
                 <div class="share" align="center">
@@ -140,6 +142,7 @@
 <script src="{{ asset('resources/plugins/chartist-js/dist/chartist.min.js') }}"></script>
 <script src="{{ asset('resources/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js') }}"></script>
 <script src="{{ asset('resources/js/admin/script.min.js') }}"></script>
+<script src="{{ asset('resources/plugins/modal/jquery.sweet-modal.min.js') }}"></script>
 
 @yield('scripts')
 

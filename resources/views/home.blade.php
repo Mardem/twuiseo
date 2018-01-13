@@ -63,7 +63,16 @@
                             <h4 style="font-family: Montserrat, serif;">Tempo Restante</h4>
                             <ul>
                                 <li><span id="sparklinedash3"></span></li>
-                                <li class="counter">9</li>
+                                <li class="counter">
+                                    @if($rCount == 0)
+                                        0
+                                        @else
+                                        @php
+                                            $rest = \App\RestTime::where('client', '=', Auth::user()->email)->get()[0];
+                                        echo $rest->restTime;
+                                        @endphp
+                                    @endif
+                                </li>
                             </ul>
                         </main>
                     </div>
@@ -459,8 +468,10 @@
 
     @if(Session::has('msg'))
         <script>
-
-            alert('{{ Session::get('msg') }}');
+            $.sweetModal({
+                content: '{{ Session::get('msg') }}',
+                icon: $.sweetModal.ICON_SUCCESS
+            });
         </script>
     @endif
 @endsection

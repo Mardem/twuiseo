@@ -20,7 +20,8 @@
   <link rel="stylesheet" href="{{ asset('resources/plugins/jquery-sweet-modal/jquery.sweet-modal.min.css') }}">
   <link rel="stylesheet" href="{{ asset('resources/plugins/calendar/css/pignose.calendar.min.css') }}">
   <link rel="stylesheet" href="{{ asset('resources/plugins/checkbox/skins/all.css?v=1.0.2') }}">
-  
+  <link rel="stylesheet" href="{{ asset('resources/plugins/modal/jquery.sweet-modal.min.css') }}">
+
 
   <style>
     .pignose-calendar{width:100%;max-width:655px;max-height:480px}.pignose-calendar .pignose-calendar-top{background:#905aca;color:white}.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon{color:white}.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon{color:white}.pignose-calendar .pignose-calendar-top .pignose-calendar-top-year{color:white}.jqstooltip{width:80px;height:35px}
@@ -111,6 +112,7 @@
 <script src="{{ asset('resources/plugins/postit/jquery.postitall.js') }}"></script>
 <script src="{{ asset('resources/js/script.min.js') }}"></script>
 <script src="{{ asset('resources/plugins/checkbox/icheck.js?v=1.0.2') }}"></script>
+<script src="{{ asset('resources/plugins/modal/jquery.sweet-modal.min.js') }}"></script>
 
 @yield('scripts')
 
